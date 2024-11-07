@@ -22,7 +22,7 @@ public class Palindrome {
         int reverse = 0; //This variable will store the reversed digits of the number
 
         while(num != 0) {   //num = 121
-            int lastDigit = number % 10;
+            int lastDigit = num % 10;
             reverse = reverse * 10 + lastDigit; //Increase the place value of reverse by one.
             num = num / 10;
         }
