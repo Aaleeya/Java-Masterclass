@@ -6,21 +6,21 @@ public class ExceptionHandling {
     public static void main(String[] args) {
         int current_year = 2024;
 
-        try{
-            System.out.println(getInputFromConsole(current_year));
-        }catch (NullPointerException e){
+//        try{
+//            System.out.println(getInputFromConsole(current_year));
+//        }catch (NullPointerException e){
             System.out.println(getInputFromScanner(current_year));
-        }
+//        }
     }
 
-    private static String getInputFromConsole(int current_year) {
-        String name = System.console().readLine("What is your name?");
-        System.out.println("Hi "+name+"!");
-
-        String dateOfBirth = System.console().readLine("What year were you born?");
-        int age = current_year - Integer.parseInt(dateOfBirth);
-        return "So you are "+ age+ " years old";
-    }
+//    private static String getInputFromConsole(int current_year) {
+//        String name = System.console().readLine("What is your name?");
+//        System.out.println("Hi "+name+"!");
+//
+//        String dateOfBirth = System.console().readLine("What year were you born?");
+//        int age = current_year - Integer.parseInt(dateOfBirth);
+//        return "So you are "+ age+ " years old";
+//    }
 
     private static String getInputFromScanner(int current_year) {
         Scanner sc = new Scanner(System.in);
@@ -40,8 +40,7 @@ public class ExceptionHandling {
             age = checkData(current_year, sc.nextLine());
             validDOB = age < 0 ?false:true;
         }while(!validDOB);
-
-        //sc.close();
+        sc.close();
         return "So you are "+ age+ " years old";
     }
 
