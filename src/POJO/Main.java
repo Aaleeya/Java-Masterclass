@@ -3,7 +3,7 @@ package POJO;
 public class Main {
     public static void main(String[] args) {
         for(int i = 1; i <= 5; i++){
-            Student s = new Student("S92300" + i,
+            LPAStudent s = new LPAStudent("S92300" + i,
                     switch (i){
                 case 1 -> "Mary";
                 case 2 -> "Carol";
