@@ -31,5 +31,8 @@ public class StringManipulation {
         System.out.println("ABC\n".repeat(3).indent(8));
         System.out.println("-".repeat(20));
 
+        System.out.println("    ABC\n".repeat(3).indent(-2));
+        System.out.println("-".repeat(20));
+
     }
 }
