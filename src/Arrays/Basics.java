@@ -15,10 +15,10 @@ public class Basics {
         int[] firstFive = {1, 2, 3, 4, 5};
         System.out.println("first = "+firstFive[0]);
         int arrayLength = firstFive.length;
-        System.out.println("Length of array ="+arrayLength);
-
+        System.out.println("Length of array = "+arrayLength);
+        System.out.println("Last = " + firstFive[arrayLength-1]);
         for (int i = 0; i < arrayLength; i++)
-            System.out.println("Element at position "+i + " = "+firstFive[i]);
+            System.out.print(firstFive[i]+ " ");
 
     }
 }
