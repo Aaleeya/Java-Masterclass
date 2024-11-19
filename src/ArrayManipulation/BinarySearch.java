@@ -11,5 +11,15 @@ public class BinarySearch {
         if(Arrays.binarySearch(sArray , "Mark") >= 0){
             System.out.println("Found Mark in the array elements");
         }
+
+        int[] num1 = { 1, 2, 3, 4, 5};
+        int[] num2 = { 5, 2, 3, 4, 1};
+
+        if(Arrays.equals(num1, num2)){
+            System.out.println("Arrays are equal");
+        }
+        else{
+            System.out.println("Arrays are not equal");
+        }
     }
 }
