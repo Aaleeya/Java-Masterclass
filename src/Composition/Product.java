@@ -29,6 +29,10 @@ class Monitor extends Product{
         this.size = size;
         this.resolution = resolution;
     }
+
+    public void drawPixelAt(int x, int y, String color){
+        System.out.println(String.format("Drawing pixel at %d %d in color %s "+ x, y, color));
+    }
 }
 
 class Motherboard extends Product{
@@ -54,7 +58,19 @@ class Motherboard extends Product{
 }
 
 class ComputerCase extends Product{
+
+    private String powerSupply;
+
     public ComputerCase(String model, String manufacturer) {
         super(model, manufacturer);
+    }
+
+    public ComputerCase(String model, String manufacturer, String powerSupply) {
+        super(model, manufacturer);
+        this.powerSupply = powerSupply;
+    }
+
+    public void pressPowerButton(){
+        System.out.println("Power button pressed");
     }
 }
