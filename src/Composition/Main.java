@@ -15,8 +15,10 @@ public class Main {
                 theMonitor, theMotherboard, theCase);
 
         //Can call the methods in Monitor, motherboard and computercase classes using PC object -this is Composition
-        thePC.getMonitor().drawPixelAt(10, 10, "red");
-        thePC.getMotherboard().loadProgram("Windows OS");
-        thePC.getComputerCase().pressPowerButton();
+//        thePC.getMonitor().drawPixelAt(10, 10, "red");
+//        thePC.getMotherboard().loadProgram("Windows OS");
+//        thePC.getComputerCase().pressPowerButton();
+
+        thePC.powerUp();
     }
 }
