@@ -1,4 +1,4 @@
-package OOPSConcepts;
+package Inheritance;
 
 public class Airfryer {
     private String model= "2002";
