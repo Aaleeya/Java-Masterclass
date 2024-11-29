@@ -41,7 +41,5 @@ public class Main {
         groceryList.remove(1);
         System.out.println(groceryList);
 
-        
-
      }
 }

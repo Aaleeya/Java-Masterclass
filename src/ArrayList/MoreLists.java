@@ -1,6 +1,8 @@
 package ArrayList;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class MoreLists {
@@ -33,6 +35,39 @@ public class MoreLists {
 
         //another way to add elements- using addAll() method - it takes any list as an argument
         groceries.addAll(nextList);
+        System.out.println(groceries);
+
+        System.out.println("Third item = "+groceries.get(2));
+
+        if(groceries.contains("cheese")){
+            System.out.println("List contains cheese");
+        }
+
+        groceries.add("yogurt");
+        System.out.println(groceries.indexOf("yogurt"));
+        System.out.println(groceries.lastIndexOf("yogurt"));
+
+        System.out.println(groceries);
+        groceries.remove(1);
+        System.out.println(groceries);
+        groceries.remove("yogurt");
+        System.out.println(groceries);
+
+        groceries.removeAll(List.of("apples", "eggs"));
+        System.out.println(groceries);
+
+        groceries.retainAll(List.of("apples", "milk","cheese","bread"));
+        System.out.println(groceries);
+
+        groceries.clear();
+        System.out.println(groceries);
+        System.out.println("Is Empty = "+groceries.isEmpty());
+
+        groceries.addAll(List.of("apples","milk","mustard", "cheese"));
+        groceries.addAll(Arrays.asList("eggs", "banana", "oranges", "yogurt"));
+
+        System.out.println(groceries);
+        groceries.sort(Comparator.naturalOrder());
         System.out.println(groceries);
     }
 }
