@@ -19,7 +19,8 @@ public class LinkedListDemo {
 //        System.out.println(placesToVisit);
 
 //        gettingElements(placesToVisit);
-        printItinerary3(placesToVisit);
+//        printItinerary3(placesToVisit);
+        testIterator(placesToVisit);
 
     }
 
@@ -108,7 +109,7 @@ public class LinkedListDemo {
         System.out.println("Trip ends at "+list.getLast());
     }
 
-    //let's try traversing a linkedlist using list iterator
+    //let's try traversing a linkedlist using iterator method from list
     public static void printItinerary3(LinkedList<String> list){
         System.out.println("Trip starts at "+list.getFirst());
         String previousCity = list.getFirst();
@@ -119,5 +120,21 @@ public class LinkedListDemo {
             previousCity = city;
         }
         System.out.println("Trip ends at "+list.getLast());
+    }
+
+    //let's try traversing a linkedlist using list iterator method from list
+    public static void testIterator(LinkedList<String> list){
+        var iterator = list.listIterator();
+        while(iterator.hasNext()){
+            //System.out.println(iterator.next());
+            if(iterator.next().equals("Dallas")){
+                iterator.add("Waterdown");
+            }
+        }
+
+        while(iterator.hasPrevious()){
+            System.out.println(iterator.previous());
+        }
+        System.out.println(list);
     }
 }
