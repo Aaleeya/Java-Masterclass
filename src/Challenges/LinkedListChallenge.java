@@ -44,9 +44,27 @@ public class LinkedListChallenge {
 
            switch(menuItem) {
                 case "F" -> {System.out.println("User wants to go forward");
+                            if(!forward){           //Reversing Direction
+                                forward = true;
+                                if(iterator.hasNext()){
+                                    iterator.next();    //adjust position forward
+                                }
+                            }
+                            if(iterator.hasNext()){
+                                System.out.println(iterator.next());
+                            }
                             break;}
 
                case "B" -> {System.out.println("User wants to go backwards");
+                   if(forward){           //Reversing Direction
+                       forward = false;
+                       if(iterator.hasPrevious()){
+                           iterator.previous();    //adjust position backwards
+                       }
+                   }
+                            if(iterator.hasPrevious()){
+                                System.out.println(iterator.previous());
+                            }
                    break;}
 
                case "M" -> {printMenu();
@@ -79,19 +97,5 @@ public class LinkedListChallenge {
                 (L)ist Places
                 (M)enu
                 (Q)uit""");
-    }
-
-    public static void moveForward(LinkedList<String> list){
-        var iterator = list.listIterator();
-        while(iterator.hasNext()){
-            System.out.println(iterator.next());
-        }
-    }
-
-    public static void moveBackward(LinkedList<String> list){
-        var iterator = list.listIterator();
-        while(iterator.hasPrevious()){
-            System.out.println(iterator.previous());
-        }
     }
 }
