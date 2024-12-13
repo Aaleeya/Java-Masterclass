@@ -1,5 +1,6 @@
 package AutoBoxing;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class AutoBoxingDemo {
@@ -25,6 +26,18 @@ public class AutoBoxingDemo {
 
         Character[] characterArray = {'a', 'b', 'c', 'd'};
         System.out.println(Arrays.toString(characterArray));
+
+        var ourList = getList(1, 2, 3, 4, 5);
+        System.out.println(ourList);
+    }
+
+    private static ArrayList<Integer> getList(int... varargs){
+
+        ArrayList<Integer> alist = new ArrayList<>();
+        for(int i : varargs){
+            alist.add(i);
+        }
+        return alist;
     }
 
     private static int returnInt(Integer i){
